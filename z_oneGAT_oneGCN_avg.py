@@ -33,7 +33,7 @@ SEED = 2
 torch.cuda.manual_seed(SEED)
 
 # 图数据的存放目录
-data_path = '/home/20_xgl/5_3/feats_with_ip/'
+data_path = './'
 # 参数选择
 params = {
 	"in_feats": 59,

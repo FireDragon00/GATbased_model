@@ -202,7 +202,7 @@ class Classifier(nn.Module):
 		self.hidden_dim = hidden_dim
 		self.meanpooling = AvgPooling()
 
-		self.gat1 = GraphConv(self.in_dim, self.hidden_dim * self.n_heads)
+		self.gat1 = GATConv(self.in_dim, self.hidden_dim, self.n_heads)
 		self.gcn1 = GraphConv(self.hidden_dim * self.n_heads, self.hidden_dim)
 
 		self.tmp = self.hidden_dim

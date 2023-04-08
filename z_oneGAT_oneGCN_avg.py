@@ -203,16 +203,16 @@ class Classifier(nn.Module):
 		self.meanpooling = AvgPooling()
 
 		self.gat1 = GATConv(self.in_dim, self.hidden_dim, self.n_heads)
-		self.gcn1 = GraphConv(self.hidden_dim * self.n_heads, self.hidden_dim)
+		self.gat2 = GATConv(self.hidden_dim * self.n_heads, self.hidden_dim, self.n_heads)
 
-		self.tmp = self.hidden_dim
+		self.tmp = self.hidden_dim * self.n_heads
 		self.classify = nn.Linear(self.tmp, n_classes)
 		self.logsoftmax = nn.LogSoftmax(dim=1)
 
 	def forward(self, g, h):
 		h = F.relu(self.gat1(g, h))
 		h = h.flatten(1)
-		h = F.relu(self.gcn1(g, h))
+		h = F.relu(self.gat2(g, h))
 		h = h.flatten(1)
 		h = self.meanpooling(g, h)
 		h = self.classify(h)

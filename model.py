@@ -36,12 +36,12 @@ torch.cuda.manual_seed(SEED)
 data_path = './'
 # 参数选择
 params = {
-	"in_feats": 59,
-	"EPOCHS": 100,
-    "batch_size": 100,
-    "hidden_dim": 50,
-    "lr": 0.001,
-    "n_heads": 9,
+"in_feats": 59,
+"EPOCHS": 30,
+"batch_size": 100,
+"hidden_dim": 50,
+"lr": 0.001,
+"n_heads": 9,
 }
 
 

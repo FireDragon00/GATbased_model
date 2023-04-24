@@ -5,4 +5,4 @@ A Mobile Application Classifying Method based on Graph Attention Network from En
 
 在服务器上运行`python model.py`，即可打印出分类结果
 
-`python z_oneGAT_oneGCN_avg.py`
+`python model.py`

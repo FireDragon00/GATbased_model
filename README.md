@@ -1,5 +1,5 @@
-# GNN-based model for classifying Apps
-A Mobile Application Classifying Method based on Graph Attention Network from Encrypted Network Traffic
+# GAT-based model for classifying Apps
+A Mobile Application-Classifying Method Based on a Graph Attention Network from Encrypted Network Traffic
 
 把data_link中的`train_graphs.bin`与`test_graphs.bin`下载并解压到该代码所在的位置，`.bin`文件可以通过调用DGL库来查看，代码与数据集的位置如下所示:
 
